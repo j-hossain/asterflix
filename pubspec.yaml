@@ -1,0 +1,28 @@
+name: asterflix
+description: "AsterFlix — A flutter app to show movie lists"
+publish_to: "none"
+version: 1.0.0
+
+environment:
+  sdk: ">=3.3.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  dio: ^5.5.0
+  flutter_riverpod: ^2.5.1
+  go_router: ^14.2.1
+  cached_network_image: ^3.3.1
+  chewie: ^1.7.5
+  video_player: ^2.9.1
+  hive: ^2.2.3
+  hive_flutter: ^1.1.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  mocktail: ^1.0.3
+  build_runner: ^2.4.11
+
+flutter:
+  uses-material-design: true

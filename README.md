@@ -20,34 +20,32 @@ Features
 
 1) Get an OMDb API key
 
-    Go to omdbapi.com/apikey.aspx and keep the key handy.
+   Go to omdbapi.com/apikey.aspx and keep the key handy.
 
 2) Install Flutter & dependencies
 
-    Make sure you have Flutter installed:
-    
-    flutter --version
-    
-    Get dependencies:
-    
-    flutter pub get
+   Make sure you have Flutter installed:
+
+   flutter --version
+
+   Get dependencies:
+
+   flutter pub get
 
 3) Create platform folders (if missing)
 
-    If you extracted this as source only:
+   If you extracted this as source only:
 
-    flutter create . --platforms=android,ios,web,macos
+   flutter create . --platforms=android,ios,web,macos
 
 4) Run the app
 
-    Replace YOUR_KEY with your OMDb key:
-    
-    flutter run --dart-define=OMDB_KEY=YOUR_KEY
+   flutter run
 
 5) Notes
 
-    Internet permission is required for Android (<uses-permission android:name="android.permission.INTERNET"/> is already added).
-    
-    Use HTTPS video URLs for playback (to avoid clear-text/CORS issues).
-    
-    Tested on Android 13, iOS 17, and Chrome Web.
+   Internet permission is required for Android (<uses-permission android:name="android.permission.INTERNET"/> is already added).
+
+   Use HTTPS video URLs for playback (to avoid clear-text/CORS issues).
+
+   Tested on Android 13

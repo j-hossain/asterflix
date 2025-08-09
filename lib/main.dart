@@ -1,4 +1,5 @@
 import 'package:asterflix/routing/app_router.dart';
+import 'package:asterflix/state/playback_store.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:hive_flutter/adapters.dart';
@@ -6,12 +7,11 @@ import 'package:hive_flutter/adapters.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Hive.initFlutter();
+  final box = await Hive.openBox('playback');
   runApp(ProviderScope(
+    overrides: [playbackStoreProvider.overrideWithValue(PlaybackStore(box))],
     child: const MyApp(),
   ));
-}
-
-class PlaybackStore {
 }
 
 class MyApp extends StatelessWidget {

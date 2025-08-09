@@ -1,16 +1,53 @@
-# asterflix
+# AsterFlix
 
-A flutter project showing movie lists from omdb
+## AsterFlix is a simple Flutter app powered by the OMDb API.It shows movie carousels, rails, detail pages, and plays video.
 
-## Getting Started
+Features
 
-This project is a starting point for a Flutter application.
+    Home – Carousel, Batman movies rail, and latest 2022 movies rail
+    
+    List View – Infinite scrolling movie lists with OMDb search & filters
+    
+    Details – Full movie info and inline video player
+    
+    Player – Resume playback where you left off
+    
+    State Management – Riverpod 2.x
+    
+    Navigation – GoRouter
 
-A few resources to get you started if this is your first Flutter project:
+### Getting Started
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+1) Get an OMDb API key
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+    Go to omdbapi.com/apikey.aspx and keep the key handy.
+
+2) Install Flutter & dependencies
+
+    Make sure you have Flutter installed:
+    
+    flutter --version
+    
+    Get dependencies:
+    
+    flutter pub get
+
+3) Create platform folders (if missing)
+
+    If you extracted this as source only:
+
+    flutter create . --platforms=android,ios,web,macos
+
+4) Run the app
+
+    Replace YOUR_KEY with your OMDb key:
+    
+    flutter run --dart-define=OMDB_KEY=YOUR_KEY
+
+5) Notes
+
+    Internet permission is required for Android (<uses-permission android:name="android.permission.INTERNET"/> is already added).
+    
+    Use HTTPS video URLs for playback (to avoid clear-text/CORS issues).
+    
+    Tested on Android 13, iOS 17, and Chrome Web.

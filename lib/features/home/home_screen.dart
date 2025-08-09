@@ -26,6 +26,7 @@ class HomeScreen extends ConsumerWidget {
             data: (d) => PortraitRail(
               title: 'Batman',
               items: d,
+              onSeeAll: () => context.push('/list?q=Batman&title=${Uri.encodeComponent('Batman')}'),
             ),
             orElse: () => const SizedBox(),
           ),
@@ -34,6 +35,7 @@ class HomeScreen extends ConsumerWidget {
             data: (d) => PortraitRail(
               title: 'Latest (2022)',
               items: d,
+              onSeeAll: () => context.push('/list?q=movie&year=2022&title=${Uri.encodeComponent('Latest (2022)')}'),
             ),
             orElse: () => const SizedBox(),
           ),

@@ -41,6 +41,9 @@ class Carousel extends StatelessWidget {
                   Positioned.fill(
                     child: Material(
                       color: Colors.transparent,
+                      child: InkWell(
+                        onTap: () => context.push('/detail/${m.imdbID}'),
+                      ),
                     ),
                   ),
                 ],

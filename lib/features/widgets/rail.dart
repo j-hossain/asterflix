@@ -31,6 +31,7 @@ class PortraitRail extends StatelessWidget {
             itemBuilder: (_, i) {
               final m = items[i];
               return InkWell(
+                onTap: () => context.push('/detail/${m.imdbID}'),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [

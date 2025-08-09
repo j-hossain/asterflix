@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
+import '../features/detail/detail_screen.dart';
 import '../features/home/home_screen.dart';
 import '../features/list/list_screen.dart';
 
@@ -16,5 +17,6 @@ final router = GoRouter(
         return ListScreen(initialQuery: q, year: year, screenTitle: title);
       },
     ),
+    GoRoute(path: '/detail/:id', builder: (_, s) => DetailScreen(imdbId: s.pathParameters['id']!)),
   ],
 );
